@@ -29,12 +29,12 @@ const NavBar = () => {
                     Home
                 </Link>
 
-                <Typography className={classes.sperator}>/</Typography>
+                {/* <Typography className={classes.sperator}>/</Typography>
 
                 <Link onClick={() => handleNav('/about')} className={classes.link}>
                     <InfoIcon className={classes.icon} />
                     About
-                </Link>
+                </Link> */}
 
                 <Typography className={classes.sperator}>/</Typography>
 
@@ -62,9 +62,13 @@ const Container = styled.div`
     width: 40%;
     @media (max-width: 1000px){
         width: 50%;
+        max-width: 450px;
     }
     @media (max-width: 800px){
         width: 65%;
+    }
+    @media (max-width: 600px){
+        width: 90%;
     }
 `;
 
