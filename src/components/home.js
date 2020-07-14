@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from "react-router-dom";
 
 // Component Imports
 import Skills from './skills.js';
@@ -14,12 +15,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Link from '@material-ui/core/Link';
 
 const Home = () => {
+    let history = useHistory();
     const classes = useStyles();
 
     return(
-        <HomeContainter>
+        <HomeContainer>
             <Img src={keyboardImg} alt='backlight keyboard' />
 
             <IntroCard>
@@ -34,13 +37,17 @@ const Home = () => {
                         <a href='https://github.com/Dazmen' target="_blank" rel='noopener noreferrer'>
                             <GitHubIcon className={classes.icon} />
                         </a>
-                        <MailOutlineIcon className={classes.icon} />
+                        <Link onClick={() => {
+                            history.push('/contact')
+                        }}>
+                            <MailOutlineIcon className={classes.icon} />
+                        </Link>
                     </IconContainer>
                 </div>
             </IntroCard>
             <Skills />
             <About />
-        </HomeContainter>
+        </HomeContainer>
     )
 };
 
@@ -74,7 +81,7 @@ const ProfileImg = styled.img`
     border-radius: 50%;
     width: 45%;
 `;
-const HomeContainter = styled.section`
+const HomeContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -94,7 +101,6 @@ const Img = styled.img`
 
 const useStyles = makeStyles((theme) => ({
     icon: {
-
         width: 30,
         height: 30,
         color: '#39ff14',

@@ -9,9 +9,10 @@ import Link from '@material-ui/core/Link';
 
 // Icon Imports
 import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
 import CodeIcon from '@material-ui/icons/Code';
 import ContactsIcon from '@material-ui/icons/Contacts';
+// import InfoIcon from '@material-ui/icons/Info';
 
 const NavBar = () => {
     let history = useHistory();
@@ -49,6 +50,17 @@ const NavBar = () => {
                     <ContactsIcon className={classes.icon} />
                     Contact
                 </Link>
+
+                <Typography className={classes.sperator}>/</Typography>
+
+                <Link href='https://drive.google.com/file/d/18FnN9JTY7VmmqECWfi2enT3p2G_Ogov_/view?usp=sharing' 
+                    className={classes.link} 
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                    >
+                    <AttachFileIcon className={classes.icon} />
+                    Resume
+                </Link>
             </Container>
         </Nav>
     )
@@ -60,15 +72,18 @@ const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
     width: 40%;
-    @media (max-width: 1000px){
-        width: 50%;
-        max-width: 450px;
+    @media (max-width: 1100px){
+        width: 60%;
+        max-width: 500px;
     }
     @media (max-width: 800px){
-        width: 65%;
+        width: 75%;
     }
     @media (max-width: 600px){
         width: 90%;
+    }
+    @media(max-width: 550px){
+        width: 100%;
     }
 `;
 
