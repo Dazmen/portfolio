@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Component Imports
+import Skills from './skills.js';
+import About from './about.js';
+
 // img imports
 import keyboardImg from '../imgs/green_keyboard.jpg';
 import profileImg from '../imgs/profile.jpg';
@@ -24,12 +28,18 @@ const Home = () => {
                     <Name>Chris Engel</Name>
                     <h2 style={{color:'#00FF01'}}>Full-Stack Web Developer</h2>
                     <IconContainer>
-                        <LinkedInIcon className={classes.icon} />
-                        <GitHubIcon className={classes.icon} />
+                        <a href="https://www.linkedin.com/in/chris-j-engel/" target="_blank" rel='noopener noreferrer'>
+                            <LinkedInIcon className={classes.icon} />
+                        </a>
+                        <a href='https://github.com/Dazmen' target="_blank" rel='noopener noreferrer'>
+                            <GitHubIcon className={classes.icon} />
+                        </a>
                         <MailOutlineIcon className={classes.icon} />
                     </IconContainer>
                 </div>
             </IntroCard>
+            <Skills />
+            <About />
         </HomeContainter>
     )
 };
@@ -46,6 +56,13 @@ const IntroCard = styled.div`
     justify-content: space evenly;
     align-items: center;
     width: 40%;
+    padding: 30px 0 50px 0;
+    @media(max-width: 1000px){
+        width: 60%;
+    }
+    @media(max-width: 600px){
+        width: 80%;
+    }
 `;
 const Name = styled.h1`
     color: #CAC5C2;
@@ -59,6 +76,7 @@ const ProfileImg = styled.img`
 `;
 const HomeContainter = styled.section`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 0 ;
@@ -69,11 +87,14 @@ const HomeContainter = styled.section`
 const Img = styled.img`
     max-width: 40%;
     border-radius: 20px;
+    @media (max-width: 1000px){
+        display: None;
+    }
 `;
 
 const useStyles = makeStyles((theme) => ({
     icon: {
-        // marginRight: theme.spacing(0.5),
+
         width: 30,
         height: 30,
         color: '#39ff14',
@@ -81,4 +102,4 @@ const useStyles = makeStyles((theme) => ({
             color: '#CAC5C2'
         }
     },
-  }));
+}));
