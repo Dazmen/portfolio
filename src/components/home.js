@@ -90,6 +90,9 @@ const HomeContainer = styled.section`
     margin: 30px auto;
     width: 80%;
     background: rgba(28,28,28, 0.7);
+    @media(max-width: 500px){
+        width: 100%;
+    }
 `;
 const Img = styled.img`
     max-width: 40%;

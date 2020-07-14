@@ -49,6 +49,9 @@ export default ProjectCard;
 const TitleCont = styled.div`
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 const H2 = styled.h2`
     display: inline-block;

@@ -31,6 +31,9 @@ const ContactContainer = styled.section`
     margin: 30px auto;
     width: 80%;
     background: rgba(28,28,28, 0.8);
+    @media(max-width: 500px){
+        width: 100%;
+    }
 
     h1 {
         font-size: 35px;
