@@ -48,6 +48,9 @@ const ProjectContainer = styled.section`
     margin: 30px auto;
     width: 90%;
     background: rgba(28,28,28, 0.7);
+    @media(max-width: 500px){
+        width: 100%;
+    }
 `;
 
 const projects = [
