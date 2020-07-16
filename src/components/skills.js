@@ -67,7 +67,7 @@ const H2 = styled.h2`
     text-align: center;
     color: #CAC5C2;
     margin: 0px;
-    font-size: 30px;
+    font-size: 36px;
     letter-spacing: 1.9px;
 `;
 const SkillsCont = styled.div`
@@ -93,4 +93,5 @@ const IconCont = styled.div`
 `;
 const H3 = styled.h3`
     color: #CAC5C2;
+    font-size: 20px;
 `;

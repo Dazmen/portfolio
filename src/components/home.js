@@ -74,7 +74,7 @@ const IntroCard = styled.div`
 `;
 const Name = styled.h1`
     color: #CAC5C2;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 2px;
     margin: 25px 0 0 0;
 `;
