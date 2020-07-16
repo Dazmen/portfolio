@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         color: '#00FF01',
         cursor: 'pointer',
-        fontSize: '18px'
+        fontSize: '16px'
     },
     icon: {
         marginRight: theme.spacing(0.5),
