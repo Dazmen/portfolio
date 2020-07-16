@@ -2,12 +2,44 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Axios from 'axios';
 
+const initialState = {
+    name: '',
+    email: '',
+    message: ''
+}
+
 const ContactForm = () => {
-    const [ formData, setFormData ] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+    const [ formData, setFormData ] = useState(initialState);
+
+    const [ formErrors, setFormErrors ] = useState(initialState);
+
+    const validate = () => {
+        let isValid = true;
+
+        const errors = {
+            name: '',
+            email: '',
+            message: ''
+        };
+
+        if(formData.name.length <= 4){
+            errors.name = "Please provide your Full Name!"
+            isValid = false
+        };
+
+        if(formData.message.length <= 25){
+            errors.message = "Please provide a message greater than 25 characters"
+            isValid = false
+        };
+
+        if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)){
+            errors.email = "Please provide a valid email address"
+            isValid = false
+        };
+
+        setFormErrors(errors);
+        return isValid
+    }
 
     const handleChanges = (e) => {
         setFormData({
@@ -16,19 +48,21 @@ const ContactForm = () => {
         })
     };
 
-    const handleSubmit = () => {
-        Axios.post('https://formspree.io/mleponnk', formData)
-            .then(res => {
-                console.log('Message Sent!', res)
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: ''
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        if(validate()){
+            Axios.post('https://formspree.io/mleponnk', formData)
+                .then(res => {
+                    console.log('Message Sent!', res)
+                    setFormData(initialState)
                 })
-            })
-            .catch(err =>{
-                console.log('message not sent', err)
-            })
+                .catch(err =>{
+                    console.log('message not sent', err)
+                })
+        } else {
+            alert("Invalid form inputs!")
+        }
     };
 
     return(
@@ -36,16 +70,19 @@ const ContactForm = () => {
             <InputCont>
                 <label htmlFor='name'> Name: </label>
                 <Input type="text" name="name" placeholder="Name" onChange={handleChanges} value={formData.name} />
+                <div>{formErrors.name}</div>
             </InputCont>
 
             <InputCont>
                 <label htmlFor='email'> Email: </label>
                 <Input type="email" name="email" placeholder="Email" onChange={handleChanges} value={formData.email} />
+                <div>{formErrors.email}</div>
             </InputCont>
 
             <InputCont>
                 <label htmlFor='message'> Message: </label>
                 <TextArea name="message" placeholder="Shoot me a message!" onChange={handleChanges} value={formData.message} />
+                <div>{formErrors.message}</div>
             </InputCont>
 
             <div style={{width: '100%'}}>
@@ -95,6 +132,10 @@ const InputCont = styled.section`
     display: flex;
     flex-direction: column;
     padding: 5px 5.5%;
+
+    div {
+        color: red;
+    }
 `;
 const TextArea = styled.textarea`
     margin: 10px 0;
