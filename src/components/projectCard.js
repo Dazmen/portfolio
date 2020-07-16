@@ -81,6 +81,7 @@ const Card = styled.div`
 `;
 const TextContainer = styled.div`
     width: 40%;
+    font-size: 18px;
     @media(max-width: 1000px){
         width: 60%;
         margin: 0 0 30px 0;

@@ -98,7 +98,8 @@ const useStyles = makeStyles((theme) => ({
     link: {
         display: 'flex',
         color: '#00FF01',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        fontSize: '18px'
     },
     icon: {
         marginRight: theme.spacing(0.5),

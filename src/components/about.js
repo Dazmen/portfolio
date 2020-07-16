@@ -19,12 +19,13 @@ const H2 = styled.h2`
     text-align: center;
     color: #CAC5C2;
     margin: 0px;
-    font-size: 30px;
+    font-size: 36px;
     letter-spacing: 1.9px;
 `;
 const P = styled.p`
     color: #CAC5C2;
-    line-height: 25px
+    line-height: 25px;
+    font-size: 20px;
 `;
 const Span = styled.span`
     color: #00ff01

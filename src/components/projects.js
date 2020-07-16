@@ -60,7 +60,7 @@ const projects = [
         techStack: 'HTML/CSS | React | Redux | Node.js/Express | Chart.js | Ant Design',
         bulletPoints: [
             "Collaborated remotely with a team of 4 other Web Developers, 4 Data Scientists and 1 UX Designer to build the foundations of Project Canopy's Proof-of-Concept web application.",
-            'Solely responsible for SQL queries to the data science database and building endpoints for the projects backend.',
+            'Solely responsible for SQL queries to the data science database and building endpoints for the projects back-end.',
             'Designed and implemented the state management for front end using Redux.',
         ],
         gitLink: 'https://github.com/Lambda-School-Labs/project-canopy-be',
@@ -74,7 +74,7 @@ const projects = [
         techStack: 'HTML/CSS | React | Styled-Components',
         bulletPoints: [
             'Solely responsible for developing a fully functional application in 4 days.',
-            'Created an algorithm to computate the next generation of cells.',
+            'Created an algorithm to compute the next generation of cells.',
             'Managed state using React hooks.'
         ],
         gitLink: 'https://github.com/Dazmen/Conway-Game-Of-Life_v2',
