@@ -16,11 +16,11 @@ const Projects = () => {
     return (
         <ProjectContainer>
             <H1 style={{color:'white'}}>PROJECTS </H1>
-            {projects.map((project, i) => {
+            {projects.map(project => {
                 return (
-                <div>
+                <div key={project.title}>
                     <LineBreak />
-                    <ProjectCard project={project} key={i}/>
+                    <ProjectCard project={project} />
                 </div>
             )
             })}
@@ -70,8 +70,8 @@ const projects = [
     },
     {
         title: 'Game of Life',
-        description: "An implementation of John Conway's Game of Life made with React. A user can manually create a configuration, randomize, select a grid size and speed of simulation.",
-        techStack: 'HTML/CSS | React',
+        description: "An implementation of John Conway's Game of Life made with React. A user can manually create a configuration, randomize, and select a grid size and speed of simulation.",
+        techStack: 'HTML/CSS | React | Styled-Components',
         bulletPoints: [
             'Solely responsible for developing a fully functional application in 4 days.',
             'Created an algorithm to computate the next generation of cells.',

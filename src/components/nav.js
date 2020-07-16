@@ -12,7 +12,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import CodeIcon from '@material-ui/icons/Code';
 import ContactsIcon from '@material-ui/icons/Contacts';
-// import InfoIcon from '@material-ui/icons/Info';
 
 const NavBar = () => {
     let history = useHistory();
@@ -30,13 +29,6 @@ const NavBar = () => {
                     Home
                 </Link>
 
-                {/* <Typography className={classes.sperator}>/</Typography>
-
-                <Link onClick={() => handleNav('/about')} className={classes.link}>
-                    <InfoIcon className={classes.icon} />
-                    About
-                </Link> */}
-
                 <Typography className={classes.sperator}>/</Typography>
 
                 <Link onClick={() => handleNav('/projects')} className={classes.link}>
@@ -53,7 +45,7 @@ const NavBar = () => {
 
                 <Typography className={classes.sperator}>/</Typography>
 
-                <Link href='https://drive.google.com/file/d/18FnN9JTY7VmmqECWfi2enT3p2G_Ogov_/view?usp=sharing' 
+                <Link href='https://drive.google.com/file/d/10LmqUZgF_CJkYVt1-bA41Ny_ktTMnOKY/view?usp=sharing' 
                     className={classes.link} 
                     target='_blank' 
                     rel='noopener noreferrer'
@@ -105,7 +97,8 @@ const useStyles = makeStyles((theme) => ({
     },
     link: {
         display: 'flex',
-        color: '#00FF01'
+        color: '#00FF01',
+        cursor: 'pointer'
     },
     icon: {
         marginRight: theme.spacing(0.5),

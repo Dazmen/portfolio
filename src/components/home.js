@@ -39,7 +39,8 @@ const Home = () => {
                         </a>
                         <Link onClick={() => {
                             history.push('/contact')
-                        }}>
+                        }}
+                        style={{cursor: 'pointer'}}>
                             <MailOutlineIcon className={classes.icon} />
                         </Link>
                     </IconContainer>

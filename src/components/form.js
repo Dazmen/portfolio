@@ -7,7 +7,7 @@ const ContactForm = () => {
         name: '',
         email: '',
         message: ''
-    })
+    });
 
     const handleChanges = (e) => {
         setFormData({
@@ -29,7 +29,7 @@ const ContactForm = () => {
             .catch(err =>{
                 console.log('message not sent', err)
             })
-    }
+    };
 
     return(
         <Form onSubmit={handleSubmit}>
