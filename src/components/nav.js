@@ -45,7 +45,7 @@ const NavBar = () => {
 
                 <Typography className={classes.sperator}>/</Typography>
 
-                <Link href='https://drive.google.com/file/d/10LmqUZgF_CJkYVt1-bA41Ny_ktTMnOKY/view?usp=sharing' 
+                <Link href='https://drive.google.com/file/d/1v2ZgKSN0gt4AjHj7nc7IoJqn2fgOSm9e/view?usp=sharing' 
                     className={classes.link} 
                     target='_blank' 
                     rel='noopener noreferrer'
