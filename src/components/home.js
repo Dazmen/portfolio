@@ -29,7 +29,7 @@ const Home = () => {
                 <ProfileImg src={profileImg} alt='Picture of Chris' />
                 <div style={{textAlign:'center'}}>
                     <Name>Chris Engel</Name>
-                    <h2 style={{color:'#00FF01'}}>Full-Stack Web Developer</h2>
+                    <h2 style={{color:'#00FF01'}}>Full-Stack Engineer</h2>
                     <IconContainer>
                         <a href="https://www.linkedin.com/in/chris-j-engel/" target="_blank" rel='noopener noreferrer'>
                             <LinkedInIcon className={classes.icon} />
